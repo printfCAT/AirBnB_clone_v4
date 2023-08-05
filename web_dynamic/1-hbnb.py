@@ -31,17 +31,24 @@ def hbnb():
 
     amenities = storage.all(Amenity).values()
     amenities = sorted(amenities, key=lambda k: k.name)
-
+    t_amenities = [
+        {'id': "01", 'name': 'pool'},
+        {'id': "02", 'name': 'gym'},
+        {'id': "03", 'name': 'Laundry'},
+        {'id': "05", 'name': 'concierge'},
+        {'id': "04", 'name': 'Court'},
+        {'id': "10", 'name': 'Jacuzzi'}
+            ]
     places = storage.all(Place).values()
     places = sorted(places, key=lambda k: k.name)
 
-    return render_template('0-hbnb.html',
+    return render_template('1-hbnb.html',
                            states=st_ct,
-                           amenities=amenities,
+                           amenities=t_amenities,
                            places=places,
                            cache_id = uuid.uuid4())
 
 
 if __name__ == "__main__":
     """ Main Function """
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5001, debug=True)
