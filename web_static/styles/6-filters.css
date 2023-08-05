@@ -88,5 +88,14 @@ div:hover > .popover {
     padding: 2em 0 2em 3em;
   }
 
+.amenities li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
 
-  
+.amenities input[type="checkbox"] {
+    position: absolute;
+    left: -10px;
+    top: 2px;
+}
